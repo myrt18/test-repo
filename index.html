@@ -1,1 +1,100 @@
-<div>hello</div>
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Skriv inn to tall</h1>
+    <h2>Addisjon</h2>
+    <input id="idTall1" type="number">
+    <input id="idTall2" type="number">
+    <p id="idRes1">Sum =</p>
+    <br>
+    <h2>Multiplisering</h2>
+    <input id="idTall3" type="number">
+    <input id="idTall4" type="number">
+    <p id="idRes2">Sum =</p>
+    <br>
+    <h2>Substrahering</h2>
+    <input id="idTall5" type="number">
+    <input id="idTall6" type="number">
+    <p id="idRes3">Sum =</p>
+    <br>
+    <h2>Dividere</h2>
+    <input id="idTall7" type="number">
+    <input id="idTall8" type="number">
+    <p id="idRes4">Sum =</p>
+    <script>
+        var tall1El = document.getElementById("idTall1")
+        var tall2El = document.getElementById("idTall2")
+        var tall3El = document.getElementById("idTall3")
+        var tall4El = document.getElementById("idTall4")
+        var tall5El = document.getElementById("idTall5")
+        var tall6El = document.getElementById("idTall6")
+        var tall7El = document.getElementById("idTall7")
+        var tall8El = document.getElementById("idTall8")
+        var res1El = document.getElementById("idRes1")
+        var res2El = document.getElementById("idRes2")
+        var res3El = document.getElementById("idRes3")
+        var res4El = document.getElementById("idRes4")
+
+
+
+        tall2El.addEventListener("keyup", sumfunk)
+        tall4El.addEventListener("keyup", sumfunk2)
+        tall6El.addEventListener("keyup", sumfunk3)
+        tall8El.addEventListener("keyup", sumfunk4)
+
+
+
+        function sumfunk(event) {
+            if (event.keyCode === 13) {
+                var tall1 = Number(tall1El.value)
+                var tall2 = Number(tall2El.value)
+                var sum = tall1 + tall2
+
+                res1El.innerHTML = "Sum = " + sum
+            }
+        }
+
+        function sumfunk2(event) {
+            if (event.keyCode === 13) {
+                var tall3 = Number(tall3El.value)
+                var tall4 = Number(tall4El.value)
+                var sum = tall3 * tall4
+
+                res2El.innerHTML = "Sum = " + sum
+            }
+        }
+
+        function sumfunk3(event) {
+            if (event.keyCode === 13) {
+                var tall5 = Number(tall5El.value)
+                var tall6 = Number(tall6El.value)
+                var sum = tall5 - tall6
+
+                res3El.innerHTML = "Sum = " + sum
+            }
+        }
+
+        function sumfunk4(event) {
+            if (event.keyCode === 13) {
+                var tall7 = Number(tall7El.value)
+                var tall8 = Number(tall8El.value)
+                var sum = tall7 / tall8
+
+                res4El.innerHTML = "Sum = " + sum
+            }
+        }
+    </script>
+</body>
+
+</html>
